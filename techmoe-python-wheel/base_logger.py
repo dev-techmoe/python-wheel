@@ -14,3 +14,11 @@ def getLogger(name=__name__):
     logger_base .addHandler(stream_handler)
     
     return logger_base 
+
+if __name__ == '__main__':
+    logger = getLogger(__name__)
+    logger.debug('debug message')
+    logger.info('info message')
+    logger.warn('warn message')
+    logger.error('error message')
+    logger.critical('critical message')
