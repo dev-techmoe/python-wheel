@@ -24,6 +24,24 @@
     JS Packer加密后的代码的一个特征就是是以`eval(function(p,a,c,k,e,d)`这样开头的代码，凡是遇到这样的代码基本可以尝试用这个轮子去解  
     输入时记住参数值要包括`eval()`结构  
     相关资料：[Python: packer方式加密js代码之解密函数](http://www.cnblogs.com/crwy/p/7659579.html)
+* `config.py` - yaml格式设定载入模块
+    支持导入yaml格式配置文件。   
+    主要方法：
+    * `load(text)` 载入yaml字符串
+    * `load_file(file_path)` 读取yaml格式配置文件
+    * `get(key)` 读取设置，支持以`.`作为分隔读取多层配置
+        例子：
+        ```
+        {
+            'a': {
+                'b': {
+                    'c': 'd'
+                }
+            }
+        }
+        ```
+        这样的格式便可以用`get('a.b.c')`去读取。   
+        提供默认值功能，使用前请自行填充代码内`default_config`这个dict
 
 ## link
 * 我的主页 - [lolicookie](https://lolicookie.com)
