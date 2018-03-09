@@ -43,13 +43,8 @@
         这样的格式便可以用`get('a.b.c')`去读取。   
         提供默认值功能，使用前请自行填充代码内`default_config`这个dict
 * `title.py` - 更改脚本运行窗口标题，多平台支持适配中  
-    此模块已经在以下平台测试
-    |system|terminal app|status|
-    |--------|--------|--------|
-    |Linux|Ubuntu/gnome-terminal|OK|
-    |Windows|Win10/PowerShell|OK|
-    |OSX|没有测试|没有测试|
-    希望有人能够帮忙测试OSX下是否能够正常工作，请将结果提交至issue，谢谢  
+    此模块已经在Windows(PowerShell、cmd)、Linux(Ubuntu Gnome Terminal)中测试正常运行。  
+    OSX暂时还没测试，希望有人能够帮忙测试OSX下是否能够正常工作，请将结果提交至issue，谢谢  
     使用方法：
     ```python
     import title
