@@ -42,6 +42,22 @@
         ```
         这样的格式便可以用`get('a.b.c')`去读取。   
         提供默认值功能，使用前请自行填充代码内`default_config`这个dict
+* `title.py` - 更改脚本运行窗口标题，多平台支持适配中  
+    此模块已经在以下平台测试
+    |system|terminal app|status|
+    |--------|--------|--------|
+    |Linux|Ubuntu/gnome-terminal|OK|
+    |Windows|Win10/PowerShell|OK|
+    |OSX|没有测试|没有测试|
+    希望有人能够帮忙测试OSX下是否能够正常工作，请将结果提交至issue，谢谢  
+    使用方法：
+    ```python
+    import title
+    title.update('Hello World')
+    ```
+    脚本自带一个demo，可以通过直接运行此模块（`python -m`）来观察效果。  
+    Linux下使用这个脚本需要注意一个问题，为了保证结果正常每次更新标题的时候都会flush掉stdout的buffer，请注意确认这一点不会对你的程序造成问题。
+
 
 ## link
 * 我的主页 - [lolicookie](https://lolicookie.com)
